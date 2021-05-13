@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include "./partials/head.html" %}
+<body>
+    {% include "./partials/header.html" %}
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <h1 class="text-center mb-4">Temporadas Cargadas</h1>
+                    <ol class="list-group text-center">
+                        {% for season in seasons %}
+                        <li class="list-group-item"><a class="text-decoration-none fs-3 text-dark" href="/episodes/{{season}}">Season {{season}}</a></li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% include "./partials/footer.html" %}
+</body>
+</html>
